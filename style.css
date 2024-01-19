@@ -434,3 +434,57 @@ footer {
 footer p {
   text-align: center;
 }
+
+/*ON SCROLL ANIMATIONS*/
+
+.section__text.animate {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.section__text.animate.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#about.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+#about.animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#experience.animate {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9) rotate(-3deg);
+  background-color: transparent;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out,
+    background-color 0.7s ease-out;
+}
+
+#experience.animate.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+#projects.animate {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9) rotate(-3deg);
+  background-color: transparent;
+  filter: grayscale(100%);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out,
+    background-color 0.7s ease-out, filter 0.7s ease-out;
+}
+
+#projects.animate.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0);
+  background-color: rgba(255, 255, 255, 0.95);
+  filter: grayscale(0%);
+}
